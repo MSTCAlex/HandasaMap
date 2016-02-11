@@ -19,6 +19,8 @@ x64/
 x86/
 build/
 bld/
+Library/
+Temp/
 [Bb]in/
 [Oo]bj/
 
@@ -194,3 +196,4 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+ProjectSettings/ProjectSettings.asset
