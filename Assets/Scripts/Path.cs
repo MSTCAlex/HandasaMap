@@ -5,7 +5,7 @@ using System.Text;
 using UnityEngine;
 public class Path
 {
-    public List<GameObject> Nodes
+    public Stack<GameObject> Nodes
     {
         get;
         set;
@@ -17,7 +17,12 @@ public class Path
     }
     public Path(bool isFound = false)
     {
-        Nodes = new List<GameObject>();
-        this.IsFound = isFound;
+        Nodes = new Stack<GameObject>();
+        IsFound = isFound;
+    }
+
+    internal void Add(GameObject node)
+    {
+        Nodes.Push(node);
     }
 }
