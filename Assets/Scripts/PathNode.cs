@@ -36,7 +36,7 @@ public class PathNode : MonoBehaviour
     public uint ID;
     public List<GameObject> Neighbors = new List<GameObject>();
     private bool Visited = false;
-    Path mostrecentpath;
+	Path mostrecentpath = new Path();
     // Use this for initialization, the constructor behaves unexpectedly
     void Awake() // Awake is guaranteed to precede Start() anywhere in the project
     {

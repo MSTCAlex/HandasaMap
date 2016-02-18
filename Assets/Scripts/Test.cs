@@ -8,14 +8,19 @@ public class Test : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        PathNode l = Begin.GetComponent<PathNode>();
-        Path P = PathNode.Find(Begin, Target.ID);
-        if (P.IsFound)
-            foreach (var item in P.Nodes)
-            {
-                Debug.Log(item.name);
-            }
+        //PathNode l = Begin.GetComponent<PathNode>();
+       
     }
+
+	public void Search()
+	{
+		Path P = PathNode.Find(Begin, Target.ID);
+		if (P.IsFound)
+			foreach (var item in P.Nodes)
+			{
+				Debug.Log(item.name);
+			}
+	}
 
     // Update is called once per frame
     void Update()
