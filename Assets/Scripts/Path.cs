@@ -11,14 +11,14 @@ public class Path
         set;
     }
     public bool IsFound
-    {
-        get;
-        set;
-    }
-    public Path(bool isFound = false)
+    { get; set; }
+    public bool IsFinal { get; set; }
+
+    public Path(bool isFound = false, bool isFinal = true)
     {
         Nodes = new Stack<GameObject>();
         IsFound = isFound;
+        IsFinal = isFinal;
     }
 
     internal void Add(GameObject node)
